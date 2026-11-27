@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="Munad Digital Services — ডিজাইন, ওয়েবসাইট ও ডিজিটাল সাপোর্ট।">
+<title>Munad Digital Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1020;--panel:#151e38;--text:#f6f7ff;--muted:#b2bdd6;--purple:#8b5cf6;--cyan:#22d3ee}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Hind Siliguri',sans-serif;background:radial-gradient(ellipse at 15% 0%,#6545ad44,transparent 40%),radial-gradient(ellipse at 90% 30%,#087e9840,transparent 35%),var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}.container{width:min(1100px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:#0b1020eF;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font:800 15px Inter,sans-serif}.mark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--cyan));display:grid;place-items:center;font-size:21px}
+.links{display:flex;gap:23px;color:var(--muted);font-size:15px}.links a:hover{color:white}
+.btn{display:inline-block;padding:11px 19px;border-radius:12px;background:linear-gradient(110deg,var(--purple),#536ff0);font-weight:700;color:white}
+.menu{display:none;background:none;color:white;border:1px solid #ffffff33;border-radius:9px;padding:7px 12px;font-size:20px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;padding:95px 0}
+.pill{display:inline-block;padding:6px 13px;border:1px solid #a78bfa66;border-radius:30px;color:#d4c8ff;background:#8b5cf622;margin-bottom:20px}
+h1{font:800 clamp(39px,6vw,66px)/1.16 Inter,'Hind Siliguri',sans-serif;letter-spacing:-1.5px;margin-bottom:22px}
+.grad{background:linear-gradient(100deg,#c4b5fd,#67e8f9);color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:18px;max-width:590px;margin-bottom:27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.outline{padding:10px 18px;border:1px solid #ffffff35;border-radius:12px}
+.visual{padding:32px;border-radius:25px;border:1px solid #ffffff25;background:linear-gradient(145deg,#1b294c,#11182e);box-shadow:0 25px 80px #0008;transform:rotate(2deg)}
+.visual .symbol{font-size:48px;color:#bdaaff}.visual h2{font:700 25px Inter,sans-serif;margin:10px 0}.visual p{font-size:15px;margin:0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}.tiles i{height:60px;border-radius:12px;background:linear-gradient(135deg,#8b5cf655,#22d3ee22);border:1px solid #ffffff16}
+section{padding:70px 0}.head{text-align:center;max-width:680px;margin:0 auto 38px}.kicker{color:#b9a5ff;font-weight:700}.head h2,.about h2,.contact h2{font-size:clamp(29px,4vw,42px);line-height:1.25;margin:8px 0 12px}.muted,.head p{color:var(--muted)}
+.cards,.works,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card,.work,.step{background:linear-gradient(145deg,#182342,#11182d);border:1px solid #ffffff17;border-radius:18px;padding:23px}
+.ico{font-size:27px;color:#c4b5fd;margin-bottom:10px}.card h3,.step h3{font-size:20px;margin-bottom:7px}.card p,.step p,.work p{color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}.aboutbox{padding:32px;border-radius:22px;background:linear-gradient(135deg,#7145c544,#087e9833);border:1px solid #ffffff20}.aboutbox strong{font:800 42px Inter;color:#b9a5ff}
+ul{list-style:none;margin-top:18px}li{margin:8px 0}li:before{content:'✓';color:#5eead4;margin-right:10px;font-weight:bold}
+.art{height:160px;border-radius:13px;display:grid;place-items:center;text-align:center;font:800 24px Inter;padding:15px;margin-bottom:15px}
+.a1{background:linear-gradient(135deg,#4c1d95,#0e7490)}.a2{background:linear-gradient(135deg,#be185d,#7c3aed)}.a3{background:linear-gradient(135deg,#065f46,#1d4ed8)}
+.work{padding:15px}.work small{color:#c4b5fd}
+.step:before{content:'✦';display:block;font-size:25px;color:#b9a5ff;margin-bottom:8px}
+.contactbox{padding:38px;border:1px solid #a78bfa66;border-radius:24px;background:linear-gradient(110deg,#6d45c633,#0e749033);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.contactbox p{color:var(--muted);max-width:600px}footer{border-top:1px solid #ffffff20;padding:25px 0;color:var(--muted);font-size:14px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:65px 0}.visual{max-width:500px}.about{grid-template-columns:1fr}.cards,.works,.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.menu{display:block}.links{display:none;position:absolute;top:72px;left:0;right:0;background:#10172d;padding:18px 25px;flex-direction:column;gap:12px}.links.open{display:flex}.navbtn{display:none}.hero{padding:55px 0}.hero p{font-size:16px}section{padding:55px 0}.cards,.works,.steps{grid-template-columns:1fr}.contactbox{align-items:flex-start;flex-direction:column}.visual{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav class="container">
+<a class="brand" href="#home"><span class="mark">M</span><span>Munad Digital<br>Services</span></a>
+<button class="menu" id="menu" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
+<div class="links" id="links"><a href="#home">হোম</a><a href="#services">সার্ভিস</a><a href="#about">আমাদের সম্পর্কে</a><a href="#portfolio">পোর্টফোলিও</a><a href="#contact">যোগাযোগ</a></div>
+<a class="btn navbtn" href="#contact">কাজের কথা বলুন ↗</a>
+</nav></header>
+<main>
+<section class="hero container" id="home">
+<div><span class="pill">✦ আপনার ব্যবসার ডিজিটাল সঙ্গী</span>
+<h1>আপনার ব্যবসাকে<br><span class="grad">ডিজিটালভাবে এগিয়ে</span><br>নিয়ে চলুন</h1>
+<p>আধুনিক ডিজাইন, আকর্ষণীয় সোশ্যাল মিডিয়া কনটেন্ট এবং সহজ ওয়েবসাইটের মাধ্যমে আপনার ব্যবসাকে অনলাইনে সুন্দরভাবে উপস্থাপন করতে আমরা সাহায্য করি।</p>
+<div class="actions"><a class="btn" href="#services">সার্ভিস দেখুন ↗</a><a class="outline" href="#portfolio">কাজের নমুনা</a></div></div>
+<div class="visual"><div class="kicker">CREATIVE DIGITAL STUDIO</div><div class="symbol">✧</div><h2>Ideas into Digital</h2><p class="muted">Design • Website • Creative Support</p><div class="tiles"><i></i><i></i><i></i></div></div>
+</section>
+<section id="services"><div class="container"><div class="head"><div class="kicker">আমাদের সার্ভিস</div><h2>আপনার প্রয়োজনীয় ডিজিটাল সেবা</h2><p>ছোট ব্যবসা, উদ্যোক্তা ও ব্যক্তিগত ব্র্যান্ডের জন্য সহজ ডিজিটাল সমাধান।</p></div>
+<div class="cards">
+<article class="card"><div class="ico">▧</div><h3>সোশ্যাল মিডিয়া ডিজাইন</h3><p>Facebook পোস্ট, কভার, ব্যানার ও প্রচারণার গ্রাফিক ডিজাইন।</p></article>
+<article class="card"><div class="ico">✎</div><h3>ব্র্যান্ডিং ও লোগো</h3><p>ব্যবসার পরিচিতির জন্য লোগো কনসেপ্ট ও ভিজ্যুয়াল ডিজাইন।</p></article>
+<article class="card"><div class="ico">⌘</div><h3>ওয়েবসাইট তৈরি</h3><p>মোবাইল-ফ্রেন্ডলি বিজনেস, পোর্টফোলিও ও ল্যান্ডিং পেজ।</p></article>
+<article class="card"><div class="ico">▤</div><h3>ডিজিটাল পোস্টার</h3><p>অফার, ইভেন্ট ও পণ্যের জন্য পরিচ্ছন্ন পোস্টার।</p></article>
+<article class="card"><div class="ico">◎</div><h3>পেজ সাজানো</h3><p>Facebook পেজের প্রোফাইল, কভার ও প্রয়োজনীয় তথ্য সাজানো।</p></article>
+<article class="card"><div class="ico">✦</div><h3>কনটেন্ট সাপোর্ট</h3><p>সোশ্যাল মিডিয়ার ক্যাপশন ও কনটেন্ট পরিকল্পনা।</p></article>
+</div></div></section>
+<section id="about"><div class="container about">
+<div class="aboutbox"><strong>01 — 06</strong><h3>ছোট উদ্যোগ, বড় সম্ভাবনা</h3><p class="muted">সহজ ডিজিটাল সমাধান দিয়ে অনলাইনে আপনার ব্যবসার উপস্থিতি গড়ে তুলুন।</p></div>
+<div><div class="kicker">আমাদের সম্পর্কে</div><h2>আপনার আইডিয়াকে অনলাইনে তুলে ধরি</h2><p class="muted">Munad Digital Services একটি নতুন ডিজিটাল সার্ভিস উদ্যোগ। আমরা ছোট ব্যবসা ও উদ্যোক্তাদের জন্য সাশ্রয়ী, ব্যবহারবান্ধব এবং সুন্দর ডিজিটাল উপস্থাপনা তৈরিতে কাজ করতে চাই। কাজ শুরুর আগে প্রয়োজন, সময় ও মূল্য পরিষ্কারভাবে জানানো হবে।</p>
+<ul><li>মোবাইল-ফ্রেন্ডলি ডিজাইন</li><li>কাজ শুরুর আগে পরিষ্কার আলোচনা</li><li>বাজেট অনুযায়ী সার্ভিস পরিকল্পনা</li><li>সহজ যোগাযোগ ও সহযোগিতা</li></ul></div>
+</div></section>
+<section id="portfolio"><div class="container"><div class="head"><div class="kicker">কাজের নমুনা</div><h2>আমাদের ডিজাইন ধারণা</h2><p>নিচের কার্ডগুলো ডেমো কনসেপ্ট; বাস্তব ক্লায়েন্টের কাজ নয়।</p></div>
+<div class="works"><article class="work"><div class="art a1">YOUR BRAND<br>YOUR STORY</div><h3>ব্র্যান্ডিং কনসেপ্ট</h3><p>আধুনিক ব্র্যান্ড ভিজ্যুয়ালের নমুনা।</p><small>ডেমো ডিজাইন</small></article>
+<article class="work"><div class="art a2">SPECIAL<br>OFFER</div><h3>প্রমোশনাল পোস্ট</h3><p>সোশ্যাল মিডিয়া প্রচারণার ডিজাইন ধারণা।</p><small>ডেমো ডিজাইন</small></article>
+<article class="work"><div class="art a3">GROW<br>ONLINE</div><h3>ওয়েব ডিজাইন কনসেপ্ট</h3><p>ব্যবসার অনলাইন উপস্থিতির ভিজ্যুয়াল ধারণা।</p><small>ডেমো ডিজাইন</small></article></div>
+</div></section>
+<section id="process"><div class="container"><div class="head"><div class="kicker">কাজের ধাপ</div><h2>যেভাবে আমরা কাজ করি</h2><p>সহজ তিনটি ধাপে আপনার কাজ এগিয়ে নেওয়া হবে।</p></div>
+<div class="steps"><article class="step"><h3>প্রয়োজন জানান</h3><p>কাজের ধরন, বাজেট ও সময়সীমা জানান।</p></article><article class="step"><h3>পরিকল্পনা ও কাজ</h3><p>কাজের পরিধি, মূল্য ও সময় ঠিক করে কাজ শুরু হবে।</p></article><article class="step"><h3>পর্যালোচনা ও ডেলিভারি</h3><p>কাজ দেখে প্রয়োজনীয় সংশোধন শেষে ফাইল বুঝে নিন।</p></article></div></div></section>
+<section id="contact"><div class="container"><div class="contactbox"><div><div class="kicker">চলুন কথা বলি</div><h2>আপনার পরবর্তী আইডিয়াটি শুরু হোক</h2><p>আপনার কাজের ধরন, প্রয়োজন ও বাজেট জানিয়ে যোগাযোগ করুন। আমরা আলোচনা করে উপযুক্ত সমাধান প্রস্তাব করব।</p></div><a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=Munad%20Digital%20Services%20Inquiry">ইমেইল করুন ↗</a></div>
+<p class="muted" style="font-size:13px;margin-top:12px">প্রকাশের আগে YOUR_EMAIL@example.com-এর জায়গায় আপনার ব্যবসার ইমেইল বসান।</p></div></section>
+</main>
+<footer><div class="container">© <span id="year"></span> Munad Digital Services · Bangladesh</div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
